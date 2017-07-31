@@ -1,7 +1,12 @@
 package chapter3.C3_1;
 
 public class C3_1_2 {
-
+	public static void main(String[] args){
+		ArrayST ST=new ArrayST<String,String>();
+		ST.put("Name","Tenglu");
+		ST.put("Gender", "Male");
+		System.out.println(ST.contains("Name"));
+	}
 }
 class ArrayST<Key,Value> implements ST<Key,Value>{
 	private Node first;
@@ -46,17 +51,21 @@ class ArrayST<Key,Value> implements ST<Key,Value>{
 	}
 	@Override
 	public boolean contains(Key key) {
-		// TODO Auto-generated method stub
+		 for(Node node=first;node!=null;node=node.next){
+			 if(key.equals(node.key)){
+				 return true;
+			 }
+		 }
 		return false;
 	}
 	@Override
 	public boolean isEmpty() {
-		// TODO Auto-generated method stub
-		return false;
+		
+		return first==null;
 	}
 	@Override
 	public int size() {
-		// TODO Auto-generated method stub
+		
 		return 0;
 	}
 	@Override
