@@ -34,7 +34,7 @@ class ArrayST<Key,Value> implements ST<Key,Value>{
 	@Override
 	public Value get(Key key){
 		for(Node node=first;node!=null;node=node.next){
-			if(key.equals(key)){
+			if(key.equals(node.key)){
 				return node.value;
 			}
 		}
