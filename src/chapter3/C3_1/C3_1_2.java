@@ -65,8 +65,11 @@ class ArrayST<Key,Value> implements ST<Key,Value>{
 	}
 	@Override
 	public int size() {
-		
-		return 0;
+		int i=0;
+		for(Node node=first;node!=null;node=node.next){
+			i++;
+		}
+		return i;
 	}
 	@Override
 	public Key min() {
@@ -115,7 +118,8 @@ class ArrayST<Key,Value> implements ST<Key,Value>{
 	}
 	@Override
 	public Iterable<Key> keys(Key lo, Key hi) {
-		// TODO Auto-generated method stub
+//		Iterable<Key> i=new Iterable<Key>();
+//		i.
 		return null;
 	}
 	@Override
