@@ -23,42 +23,48 @@ public class BSTImpl<Key,Value> implements BST<Key,Value>{
 			if(node.key.toString().compareTo(key.toString())==0){
 				return node.value;
 			}else{
-				if(node.key.toString().compareTo(key.toString())<=0){
-					node=node.left;
-				}
-				if(node.key.toString().compareTo(key.toString())>=0){
+				
+				if(node.key.toString().compareTo(key.toString())<0){
+					
 					node=node.right;
+				}
+				else if(node.key.toString().compareTo(key.toString())>0){
+					node=node.left;
 				}
 			}
 		}
+		
 		return null;
 	}
 
 	@Override
 	public void delete(Key key) {
-		// TODO Auto-generated method stub
+		
 		
 	}
 
 	@Override
 	public void put(Key key, Value value) {
-		if (root==null){
-			root=new Node(key,value,1);
+		root=put(root,key,value);
+		
+	}
+	public Node put(Node node, Key key, Value value){
+		
+		if(node==null){
+			return new Node(key,value,1);
+			
 		}else{
-			Node node=root;
-			while(node!=null){
-				if(node.key.toString().compareTo(key.toString())>0){
-					node.N++;
-					node=node.left;					
-				}else if(node.key.toString().compareTo(key.toString())<0){
-					node.N++;
-					node=node.right;
-				}else{
-					break;
-				}
-				node=new Node(key,value,1);
+			if(key.toString().compareTo(node.key.toString())>0){
+				node.right=put(node.right,key,value);
+			}else if(key.toString().compareTo(node.key.toString())<0){
+				node.left=put(node.left,key,value);
+			}else{
+				node.value=value;
 			}
+			node.N=size(node.left)+size(node.right)+1;
 		}
+		
+		return node;
 		
 	}
 
@@ -69,11 +75,11 @@ public class BSTImpl<Key,Value> implements BST<Key,Value>{
 			if(node.key.toString().compareTo(key.toString())==0){
 				return true;
 			}else{
-				if(node.key.toString().compareTo(key.toString())<=0){
-					node=node.left;
-				}
-				if(node.key.toString().compareTo(key.toString())>=0){
+				if(node.key.toString().compareTo(key.toString())<0){
 					node=node.right;
+				}
+				else if(node.key.toString().compareTo(key.toString())>0){
+					node=node.left;
 				}
 			}
 		}
@@ -90,6 +96,12 @@ public class BSTImpl<Key,Value> implements BST<Key,Value>{
 	public int size() {
 		
 		return root.N;
+	}
+	public int size(Node node){
+		if(node==null){
+			return 0;
+		}
+		return size(node.left)+1+size(node.right);
 	}
 
 	@Override
@@ -160,8 +172,23 @@ public class BSTImpl<Key,Value> implements BST<Key,Value>{
 
 	@Override
 	public Iterable<Key> keys() {
-		// TODO Auto-generated method stub
+		Node node=root;
+		
 		return null;
+	}
+	
+	public String toString(){
+		Node node=root;
+		return toString(node);
+	}
+	
+	public String toString(Node node){
+		if(node==null){
+			return "";
+		}
+		
+		return toString(node.left)+node.key+toString(node.right);
+		
 	}
 
 }

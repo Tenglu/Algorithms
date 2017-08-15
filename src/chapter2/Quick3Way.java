@@ -6,7 +6,7 @@ public class Quick3Way {
 		Comparable[] a={'R','B','W','W','R','W','B','R','R','W','B','R'};
 		sort(a,0,a.length-1);
 		for(Comparable i:a){
-			//System.out.print(i+" ");
+			System.out.print(i+" ");
 		}
 	}
 	public static void sort(Comparable[] a,int lo, int hi){
