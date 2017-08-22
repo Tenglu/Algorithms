@@ -1,5 +1,5 @@
-package chapter2;
-import chapter2.StdDraw;
+package sprint1.chapter2;
+import sprint1.chapter2.StdDraw;
 
 public class C_2_1_17 {
 

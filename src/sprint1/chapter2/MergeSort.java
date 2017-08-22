@@ -1,4 +1,4 @@
-package chapter2;
+package sprint1.chapter2;
 
 public class MergeSort {
 	public static void mergeSort(int[] a,int lo,int hi){

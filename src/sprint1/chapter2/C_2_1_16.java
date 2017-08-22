@@ -1,4 +1,4 @@
-package chapter2;
+package sprint1.chapter2;
 
 public class C_2_1_16 {
 

@@ -1,4 +1,4 @@
-package chapter3.C3_1;
+package sprint1.chapter3.C3_1;
 
 import java.util.ArrayList;
 import java.util.Iterator;

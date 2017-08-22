@@ -1,4 +1,4 @@
-package chapter1;
+package sprint1.chapter1;
 import java.util.Arrays;
 
 public class C1_1_22 {

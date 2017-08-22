@@ -1,4 +1,4 @@
-package chapter1;
+package sprint1.chapter2;
 /*************************************************************************
  *  Compilation:  javac StdDraw.java
  *  Execution:    java StdDraw

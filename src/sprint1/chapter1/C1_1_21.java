@@ -1,4 +1,4 @@
-package chapter1;
+package sprint1.chapter1;
 import java.io.*;
 
 public class C1_1_21 {

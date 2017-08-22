@@ -1,4 +1,4 @@
-package chapter1;
+package sprint1.chapter1;
 import java.util.ArrayList;
 import java.util.List;
 

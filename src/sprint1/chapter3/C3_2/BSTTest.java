@@ -1,4 +1,4 @@
-package chapter3.C3_2;
+package sprint1.chapter3.C3_2;
 
 public class BSTTest {
 

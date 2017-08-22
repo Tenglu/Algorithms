@@ -1,4 +1,4 @@
-package chapter2;
+package sprint1.chapter2;
 
 public class Quick3Way {
 
