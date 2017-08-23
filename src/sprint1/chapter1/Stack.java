@@ -37,11 +37,26 @@ public class Stack<Item> implements Iterable<Item> {
 			System.out.print(node.item.toString()+" ");
 			node=node.next;
 		}
+		System.out.println();
 	}
 	@Override
 	public Iterator<Item> iterator() {
-		// TODO Auto-generated method stub
-		return null;
+		return new ListIterator();
+	}
+	private class ListIterator implements Iterator<Item>{
+		private Node current=first;
+		@Override
+		public boolean hasNext() {
+			return current!=null;
+		}
+
+		@Override
+		public Item next() {
+			Item i=current.item;
+			current=current.next;
+			return i;
+		}
+		
 	}
 	
 
