@@ -8,7 +8,7 @@ public class WeightedQuickUnionUF implements UF	 {
 	public WeightedQuickUnionUF(int N) {
 		id=new int[N];
 		sz=new int[N];
-		for(int i=1;i<N;i++){
+		for(int i=0;i<N;i++){
 			id[i]=i;
 			sz[i]=1;
 		}
@@ -49,17 +49,26 @@ public class WeightedQuickUnionUF implements UF	 {
 		return count;
 	}
 	public void printAll(){
-		for(int i:id){
-			System.out.print(i+": "+id[i]);
-			System.out.println();
+		for(int i=0;i<id.length;i++){
+			System.out.println(i+": "+id[i]);
+			
 		}
+		System.out.println();
 		
 	}
 	public static void main(String[] args) {
-		WeightedQuickUnionUF uf=new WeightedQuickUnionUF(8);
-		uf.union(7, 5);
-		uf.union(5, 3);
-		uf.union(2,1);
+		WeightedQuickUnionUF uf=new WeightedQuickUnionUF(10);
+		uf.union(4, 3);
+		uf.union(3, 8);
+		uf.union(6,5);
+		uf.union(9,4);
+		uf.union(2, 1);
+		uf.union(8, 9);
+		uf.union(5, 0);
+		uf.union(7, 2);
+		uf.union(6, 1);
+		uf.union(1, 0);
+		uf.union(6, 7);
 		uf.printAll();
 	}
 
