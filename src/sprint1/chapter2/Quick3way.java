@@ -2,13 +2,19 @@ package sprint1.chapter2;
 
 public class Quick3way {
 	public static void sort(Comparable[] a, int lo,int hi){
-		if(hi<=lo) return;
-		int lt=lo, i=lo+1, gt=hi;
+		if(lo>=hi) return;
 		Comparable v=a[lo];
-		
+		int lt=lo,gt=hi,i=lo+1;
 		while(i<=gt){
-			
+			int cmp=a[i].compareTo(v);
+			if(cmp<0) exac(a,i++,lt++);
+			else if(cmp>0) exac(a,i,gt--);
+			else {
+				i++;
+			}
 		}
+		sort(a,lo,lt-1);
+		sort(a,gt+1,hi);
 	}
 
 	
