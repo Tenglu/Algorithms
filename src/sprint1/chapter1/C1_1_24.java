@@ -1,4 +1,4 @@
-package chapter1;
+package sprint1.chapter1;
 
 public class C1_1_24 {
 	public static void main(String[] args){

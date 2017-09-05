@@ -1,6 +1,6 @@
-package chapter3.C3_2;
+package sprint1.chapter3.C3_1;
 
-public interface BST<Key,Value> {
+public interface ST<Key,Value> {
 	
 	Value get(Key key);
 	
