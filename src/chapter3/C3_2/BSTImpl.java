@@ -89,7 +89,13 @@ public class BSTImpl<Key,Value> implements BST<Key,Value>{
 	@Override
 	public int size() {
 		
-		return root.N;
+		return size(root);
+	}
+	public int size(Node node){
+		if(node==null){
+			return 0;
+		}
+		 return size(node.left)+size(node.right)+1;
 	}
 
 	@Override
@@ -136,7 +142,9 @@ public class BSTImpl<Key,Value> implements BST<Key,Value>{
 
 	@Override
 	public void deleteMin() {
-		// TODO Auto-generated method stub
+		
+	}
+	public void deleteMin(Node node){
 		
 	}
 
