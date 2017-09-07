@@ -15,6 +15,15 @@ public class SortTest {
 		Comparable[] d={9,5,1,7,4,3,6};
 		MergeSort.sort(d);
 		MergeSort.show(d);
+		Comparable[] e={9,5,1,7,4,3,6};
+		Quick.sort(e);
+		Quick.show(e);
+		Comparable[] f={9,5,1,7,4,3,6};
+		Quick3way.sort(f, 0, f.length-1);
+		Quick3way.show(f);
+		Comparable[] g={0,9,5,1,7,4,3,6};
+		HeapSort.sort(a);;
+		HeapSort.show(f);
 	}
 
 }

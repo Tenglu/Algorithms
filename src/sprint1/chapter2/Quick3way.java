@@ -28,7 +28,7 @@ public class Quick3way {
 		return a.compareTo(b)<0;
 	}
 	public static void show(Comparable[] a){
-		System.out.println("========Quick Sort=========");
+		System.out.println("========Quick3way Sort=========");
 		for(Comparable i:a){
 			System.out.print(i+" ");
 		}
